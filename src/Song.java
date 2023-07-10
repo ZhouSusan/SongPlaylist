@@ -1,7 +1,7 @@
 import java.util.UUID;
 
 public class Song {
-    private UUID _id;
+    private String _id;
     private String _title;
     private String _artist;
     private String _duration;
@@ -14,8 +14,7 @@ public class Song {
         this._duration = duration;
         this._album = album;
 
-        final String uuid = UUID.randomUUID().toString().replace("-", "");
+        _id = UUID.randomUUID().toString().replace("-", "").toUpperCase();
     }
-
 
 }
