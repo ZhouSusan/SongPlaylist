@@ -64,4 +64,10 @@ public class Song {
         String regex = "^(?:[0-9]+(?:[:][0-9]+)?|[:][0-9]+)$";
         return inputStr.matches(regex) ? true : false;
     }
+
+    public String toString() {
+        return "Song Details {" +
+                "Title: " + getTitle()+ ",\nArtist: " + getArtist() +
+                ",\nAlbum: " + getAlbum() + ",\nDuration of Song: " +getDuration() + "}";
+    }
 }
