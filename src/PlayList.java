@@ -51,8 +51,22 @@ public class PlayList {
     }
 
     public void showPlayList() {
+        if (getPlayListSize() == 0) {
+            System.out.println("PlayList is currently empty.");
+        }
         for (Song s : songList) {
             System.out.println(s + "\n");
         }
+    }
+
+    public void updateSong(int index, String title, String artist, String duration, String album) {
+        if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+
+        songList.get(index-1).setTitle(title);
+        songList.get(index-1).setArtist(artist);
+        songList.get(index-1).setDuration(duration);
+        songList.get(index-1).setAlbum(album);
     }
 }
