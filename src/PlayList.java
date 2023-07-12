@@ -4,7 +4,6 @@ public class PlayList {
 
     private ArrayList<Song> songList;
     private int trackNumber;
-    private int playListSize;
 
     public PlayList () {
         this.songList = new ArrayList<Song>();
@@ -44,4 +43,10 @@ public class PlayList {
         System.out.println(songList.get(index).toString());
     }
 
+    public void removeSong(int index) {
+        if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        this.songList.remove(index);
+    }
 }
