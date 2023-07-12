@@ -49,4 +49,10 @@ public class PlayList {
         }
         this.songList.remove(index);
     }
+
+    public void showPlayList() {
+        for (Song s : songList) {
+            System.out.println(s + "\n");
+        }
+    }
 }

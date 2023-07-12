@@ -17,6 +17,9 @@ public class Song {
         _id = UUID.randomUUID().toString().replace("-", "").toUpperCase();
     }
 
+    public Song() {
+        _id = UUID.randomUUID().toString().replace("-", "").toUpperCase();
+    }
 
     public String getId() {
         return this._id;
