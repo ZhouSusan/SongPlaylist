@@ -66,8 +66,8 @@ public class Song {
     }
 
     public String toString() {
-        return "Song Details {" +
-                "Title: " + getTitle()+ ",\nArtist: " + getArtist() +
+        return "Song Details { ID: " + getId() +
+                "\nTitle: " + getTitle()+ ",\nArtist: " + getArtist() +
                 ",\nAlbum: " + getAlbum() + ",\nDuration of Song: " +getDuration() + "}";
     }
 }

@@ -9,11 +9,7 @@ public class PlayList {
         this.songList = new ArrayList<Song>();
     }
 
-    public void setPlayListSize() {
-        this.playListSize = songList.size();
-    }
-
     public int getPlayListSize() {
-        return this.playListSize;
+        return this.songList.size();
     }
 }
