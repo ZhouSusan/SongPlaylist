@@ -37,4 +37,11 @@ public class PlayList {
         return null;
     }
 
+    public void displaySongAtIndex (int index) {
+        if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        System.out.println(songList.get(index).toString());
+    }
+
 }
