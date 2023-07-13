@@ -40,7 +40,7 @@ public class PlayList {
         if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        System.out.println(songList.get(index).toString());
+        System.out.println("Track Number: " + (index-1) + songList.get(index).toString());
     }
 
     public void removeSong(int index) {
@@ -54,8 +54,8 @@ public class PlayList {
         if (getPlayListSize() == 0) {
             System.out.println("PlayList is currently empty.");
         }
-        for (Song s : songList) {
-            System.out.println(s + "\n");
+        for (int i = 0; i < songList.size(); i++) {
+            System.out.println("Track Number: " + i + " - "+ songList.get(i) + "\n");
         }
     }
 
@@ -64,9 +64,10 @@ public class PlayList {
             throw new ArrayIndexOutOfBoundsException();
         }
 
-        songList.get(index-1).setTitle(title);
-        songList.get(index-1).setArtist(artist);
-        songList.get(index-1).setDuration(duration);
-        songList.get(index-1).setAlbum(album);
+        songList.get(index).setTitle(title);
+        songList.get(index).setArtist(artist);
+        songList.get(index).setDuration(duration);
+        songList.get(index).setAlbum(album);
     }
+
 }
