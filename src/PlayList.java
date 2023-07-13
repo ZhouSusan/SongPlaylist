@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class PlayList {
 
@@ -68,6 +70,21 @@ public class PlayList {
         songList.get(index).setArtist(artist);
         songList.get(index).setDuration(duration);
         songList.get(index).setAlbum(album);
+    }
+
+    public void shufflePlayList() {
+        int size = songList.size();
+        Random r = new Random();
+        for (int i = 0; i < size; i++) {
+            int changedValue = i + r.nextInt(size-i);
+            swap(songList, i, changedValue);
+        }
+    }
+
+    private void swap(List<Song> playlist, int index, int changedValue) {
+        Song temp = playlist.get(index);
+        playlist.set(index, playlist.get(changedValue));
+        playlist.set(changedValue, temp);
     }
 
 }
