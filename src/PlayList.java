@@ -7,6 +7,8 @@ public class PlayList {
     private ArrayList<Song> songList;
     private int trackNumber;
 
+    int counter;
+
     public PlayList () {
         this.songList = new ArrayList<Song>();
         this.trackNumber = 0;
@@ -89,6 +91,14 @@ public class PlayList {
         Song temp = playlist.get(index);
         playlist.set(index, playlist.get(changedValue));
         playlist.set(changedValue, temp);
+    }
+
+    public void play() {
+        if (songList.size() == 0) {
+            System.out.println("Your playlist is currently empty.");
+            return;
+        }
+        displaySongAtIndex(counter);
     }
 
 }
