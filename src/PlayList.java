@@ -39,10 +39,14 @@ public class PlayList {
     }
 
     public void displaySongAtIndex (int index) {
-        if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
+        if (songList.size() == 0) {
+            System.out.println("Your playlist is currently empty.");
+            return;
+        }
+        if (index < 0 || index > songList.size()-1) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        System.out.println("Track Number: " + (index) + songList.get(index).toString());
+        System.out.println("Track Number: " + (index) + "\n" + songList.get(index).toString());
     }
 
     public void removeSong(int index) {

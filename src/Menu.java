@@ -27,10 +27,6 @@ public class Menu {
 
             switch (userChoice) {
                 case 1:
-                    if (playList.getPlayListSize() == 0) {
-                        System.out.println("Playlist is empty.");
-                    }
-
                     playList.displaySongAtIndex(0);
                 case 2:
                     // ToDo
@@ -61,9 +57,8 @@ public class Menu {
                     int songSelection = scan.nextInt();
 
                     System.out.print("Enter Title: ");
-                    String updatedTitle = scan.nextLine();
-
                     scan.nextLine();
+                    String updatedTitle = scan.nextLine();
 
                     System.out.print("Enter Artist: ");
                     String updatedArtist = scan.nextLine();
