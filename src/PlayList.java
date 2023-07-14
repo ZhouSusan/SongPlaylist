@@ -42,7 +42,7 @@ public class PlayList {
         if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        System.out.println("Track Number: " + (index-1) + songList.get(index).toString());
+        System.out.println("Track Number: " + (index) + songList.get(index).toString());
     }
 
     public void removeSong(int index) {
