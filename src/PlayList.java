@@ -101,4 +101,18 @@ public class PlayList {
         displaySongAtIndex(counter);
     }
 
+    public void playNextSong() {
+        if (songList.size() == 0) {
+            System.out.println("Your playlist is currently empty.");
+            return;
+        }
+        Song nextObject = songList.get(counter);
+        counter += 1;
+        if (counter >= songList.size()) {
+            counter = 0;
+        }
+
+        System.out.println(nextObject.toString());
+    }
+
 }
