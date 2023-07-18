@@ -15,6 +15,7 @@ public class Menu {
                 System.out.println("    7- Find Song");
                 System.out.println("    8- View PlayList");
                 System.out.println("    9- Randomize PlayList");
+                System.out.println("    10- Sort PlayList by Title");
                 System.out.println("    0- Quit");
                 System.out.println();
                 System.out.print("Enter choice: ");
@@ -92,7 +93,7 @@ public class Menu {
                     playList.shufflePlayList();
                     break;
                 case 10:
-                    scan.nextLine();
+                    playList.sortByTitleASC();
                     break;
             }
 

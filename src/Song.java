@@ -71,4 +71,14 @@ public class Song {
                 "\nTitle: " + getTitle()+ ",\nArtist: " + getArtist() +
                 ",\nAlbum: " + getAlbum() + ",\nDuration of Song: " +getDuration() + "}";
     }
+
+    public static Comparator<Song> SongTitleComparator = new Comparator<Song>() {
+        @Override
+        public int compare(Song song1, Song song2) {
+            String songTitleOne = song1.getTitle().toLowerCase().trim();
+            String songTitleTwo = song2.getTitle().toLowerCase().trim();
+            return songTitleOne.compareTo(songTitleTwo);
+        }
+    };
+
 }

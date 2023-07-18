@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -98,7 +99,6 @@ public class PlayList {
             System.out.println("Your playlist is currently empty.");
             return;
         }
-        System.out.println("Play Counter  - " + counter);
         displaySongAtIndex(this.counter);
     }
 
@@ -138,5 +138,9 @@ public class PlayList {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public void sortByTitleASC() {
+        Collections.sort(songList, Song.SongTitleComparator);
     }
 }
