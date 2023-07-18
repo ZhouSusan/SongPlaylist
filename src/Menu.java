@@ -27,7 +27,7 @@ public class Menu {
 
             switch (userChoice) {
                 case 1:
-                    playList.displaySongAtIndex(0);
+                    playList.play();
                     break;
                 case 2:
                     playList.playNextSong();

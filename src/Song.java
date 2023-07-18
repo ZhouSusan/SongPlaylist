@@ -56,7 +56,6 @@ public class Song {
 
     public String getAlbum() {
         return this._album;
-
     }
 
     public boolean durationValidator(String inputStr) {
