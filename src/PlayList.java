@@ -143,4 +143,9 @@ public class PlayList {
     public void sortByTitleASC() {
         Collections.sort(songList, Song.SongTitleComparator);
     }
+
+    public void resetPlaylist() {
+        this.songList.clear();
+        System.out.println("Your playlist has been cleared.");
+    }
 }

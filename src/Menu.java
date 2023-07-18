@@ -16,15 +16,16 @@ public class Menu {
                 System.out.println("    8- View PlayList");
                 System.out.println("    9- Randomize PlayList");
                 System.out.println("    10- Sort PlayList by Title");
+                System.out.println("    11- Reset playlist");
                 System.out.println("    0- Quit");
                 System.out.println();
                 System.out.print("Enter choice: ");
                 userChoice = scan.nextInt();
 
-                if (userChoice < 0 || userChoice > 10) {
-                    System.out.println("Invalid choice. Please choose a number between 0 - 10");
+                if (userChoice < 0 || userChoice > 11) {
+                    System.out.println("Invalid choice. Please choose a number between 0 - 12");
                 }
-            } while (userChoice < 0 || userChoice > 10);
+            } while (userChoice < 0 || userChoice > 11);
 
             switch (userChoice) {
                 case 1:
@@ -94,6 +95,9 @@ public class Menu {
                     break;
                 case 10:
                     playList.sortByTitleASC();
+                    break;
+                case 11:
+                    playList.resetPlaylist();
                     break;
             }
 
