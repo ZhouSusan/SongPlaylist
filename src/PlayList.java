@@ -7,7 +7,7 @@ public class PlayList {
     private ArrayList<Song> songList;
     private int trackNumber;
 
-    int counter;
+    int counter = 0;
 
     public PlayList () {
         this.songList = new ArrayList<Song>();
@@ -98,21 +98,24 @@ public class PlayList {
             System.out.println("Your playlist is currently empty.");
             return;
         }
-        displaySongAtIndex(counter);
+        System.out.println("Play Counter  - " + counter);
+        displaySongAtIndex(this.counter);
     }
 
     public void playNextSong() {
+
+        this.counter += 1;
         if (songList.size() == 0) {
             System.out.println("Your playlist is currently empty.");
             return;
         }
-        Song nextObject = songList.get(counter);
-        counter += 1;
-        if (counter >= songList.size()) {
-            counter = 0;
+        if (this.counter >= songList.size()) {
+            this.counter = 0;
         }
+        Song nextObject = songList.get(this.counter);
+
+        System.out.println("Counter(Next)  - " + counter);
 
         System.out.println(nextObject.toString());
     }
-
 }
