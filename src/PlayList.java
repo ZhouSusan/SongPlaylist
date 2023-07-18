@@ -118,4 +118,25 @@ public class PlayList {
 
         System.out.println(nextObject.toString());
     }
+
+    public void playPreviousSong() {
+
+        this.counter = this.counter - 1;
+        if (songList.size() == 0) {
+            System.out.println("Your playlist is currently empty.");
+            return;
+        }
+
+        if ( this.counter < 0) {
+            this.counter = songList.size()-1;
+        }
+
+        try {
+            System.out.println("Back Counter  - " + this.counter);
+            Song previousObject = songList.get(this.counter);
+            System.out.println(previousObject.toString());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
