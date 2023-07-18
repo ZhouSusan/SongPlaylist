@@ -28,11 +28,12 @@ public class Menu {
             switch (userChoice) {
                 case 1:
                     playList.displaySongAtIndex(0);
+                    break;
                 case 2:
-                    // ToDo
+                    playList.playNextSong();
                     break;
                 case 3:
-                    // ToDo
+                    playList.playPreviousSong();
                     break;
                 case 4:
                     Song newSong = new Song();
@@ -43,7 +44,7 @@ public class Menu {
                     System.out.print("Enter Artist: ");
                     newSong.setArtist(scan.nextLine());
 
-                    System.out.print("Enter Duration: ");
+                    System.out.print("Enter Duration in this format (0:00): ");
                     newSong.setDuration(scan.nextLine());
 
                     System.out.print("Enter Album: ");
@@ -63,7 +64,7 @@ public class Menu {
                     System.out.print("Enter Artist: ");
                     String updatedArtist = scan.nextLine();
 
-                    System.out.print("Enter Duration: ");
+                    System.out.print("Enter Duration in this format (0:00): ");
                     String updatedDuration = scan.nextLine();
 
                     System.out.print("Enter Album: ");
