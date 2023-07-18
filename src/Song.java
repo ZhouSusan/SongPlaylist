@@ -7,7 +7,6 @@ public class Song {
     private String _duration;
     private String _album;
 
-
     public Song(String title, String artist, String duration, String album) {
         this._title = title;
         this._artist = artist;
