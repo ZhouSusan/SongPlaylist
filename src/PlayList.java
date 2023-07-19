@@ -52,9 +52,6 @@ public class PlayList {
     }
 
     public void removeSong(int index) {
-        if (isSongListEmpty()) {
-            return;
-        }
 
         if (index < 0 || index > songList.size()-1) {
             throw new ArrayIndexOutOfBoundsException();
@@ -73,9 +70,6 @@ public class PlayList {
     }
 
     public void updateSong(int index, String title, String artist, String duration, String album) {
-        if (isSongListEmpty()) {
-            return;
-        }
 
         if (index < 0 || index > songList.size()-1) {
             throw new ArrayIndexOutOfBoundsException();

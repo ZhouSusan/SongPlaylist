@@ -56,26 +56,33 @@ public class Menu {
                     System.out.println(newSong.toString());
                     break;
                 case 5:
-                    System.out.println("Updating which song selection?");
-                    int songSelection = scan.nextInt();
+                    if (playList.isSongListEmpty()) {
+                        break;
+                    } else {
+                        System.out.println("Updating which song selection?");
+                        int songSelection = scan.nextInt();
 
-                    System.out.print("Enter Title: ");
-                    scan.nextLine();
-                    String updatedTitle = scan.nextLine();
+                        System.out.print("Enter Title: ");
+                        scan.nextLine();
+                        String updatedTitle = scan.nextLine();
 
-                    System.out.print("Enter Artist: ");
-                    String updatedArtist = scan.nextLine();
+                        System.out.print("Enter Artist: ");
+                        String updatedArtist = scan.nextLine();
 
-                    System.out.print("Enter Duration in this format (0:00): ");
-                    String updatedDuration = scan.nextLine();
+                        System.out.print("Enter Duration in this format (0:00): ");
+                        String updatedDuration = scan.nextLine();
 
-                    System.out.print("Enter Album: ");
-                    String updatedAlbum = scan.nextLine();
+                        System.out.print("Enter Album: ");
+                        String updatedAlbum = scan.nextLine();
 
-                    playList.updateSong(songSelection, updatedTitle, updatedArtist, updatedDuration, updatedAlbum);
-                    playList.displaySongAtIndex(songSelection);
+                        playList.updateSong(songSelection, updatedTitle, updatedArtist, updatedDuration, updatedAlbum);
+                        playList.displaySongAtIndex(songSelection);
+                    }
                     break;
                 case 6:
+                    if (playList.isSongListEmpty()) {
+                        break;
+                    }
                     playList.showPlayList();
                     System.out.println("Which song would you like to remove? Track Number: ");
                     int removeSong = scan.nextInt();
