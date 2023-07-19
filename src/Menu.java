@@ -53,7 +53,9 @@ public class Menu {
                     newSong.setAlbum(scan.nextLine());
 
                     playList.addSong(newSong);
+                    System.out.println();
                     System.out.println(newSong.toString());
+                    System.out.println();
                     break;
                 case 5:
                     if (playList.isSongListEmpty()) {
@@ -76,7 +78,9 @@ public class Menu {
                         String updatedAlbum = scan.nextLine();
 
                         playList.updateSong(songSelection, updatedTitle, updatedArtist, updatedDuration, updatedAlbum);
+                        System.out.println();
                         playList.displaySongAtIndex(songSelection);
+                        System.out.println();
                     }
                     break;
                 case 6:
@@ -99,9 +103,13 @@ public class Menu {
                     break;
                 case 9:
                     playList.shufflePlayList();
+                    playList.showPlayList();
+                    System.out.println();
                     break;
                 case 10:
                     playList.sortByTitleASC();
+                    playList.showPlayList();
+                    System.out.println();
                     break;
                 case 11:
                     playList.resetPlaylist();
