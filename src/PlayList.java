@@ -118,9 +118,6 @@ public class PlayList {
             this.counter = 0;
         }
         Song nextObject = songList.get(this.counter);
-
-        System.out.println("Counter(Next)  - " + counter);
-
         System.out.println(nextObject.toString());
     }
 
@@ -136,7 +133,6 @@ public class PlayList {
         }
 
         try {
-            System.out.println("Back Counter  - " + this.counter);
             Song previousObject = songList.get(this.counter);
             System.out.println(previousObject.toString());
         } catch (Exception e) {
