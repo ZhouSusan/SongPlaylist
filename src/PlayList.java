@@ -42,8 +42,7 @@ public class PlayList {
     }
 
     public void displaySongAtIndex (int index) {
-        if (songList.size() == 0) {
-            System.out.println("Your playlist is currently empty.");
+        if (isSongListEmpty()) {
             return;
         }
         if (index < 0 || index > songList.size()-1) {
@@ -53,23 +52,32 @@ public class PlayList {
     }
 
     public void removeSong(int index) {
-        if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
+        if (isSongListEmpty()) {
+            return;
+        }
+
+        if (index < 0 || index > songList.size()-1) {
             throw new ArrayIndexOutOfBoundsException();
         }
         this.songList.remove(index);
     }
 
     public void showPlayList() {
-        if (getPlayListSize() == 0) {
-            System.out.println("PlayList is currently empty.");
+        if (isSongListEmpty()) {
+            return;
         }
+
         for (int i = 0; i < songList.size(); i++) {
             System.out.println("Track Number: " + i + " - "+ songList.get(i) + "\n");
         }
     }
 
     public void updateSong(int index, String title, String artist, String duration, String album) {
-        if (songList.size() == 0 || index < 0 || index > songList.size()-1) {
+        if (isSongListEmpty()) {
+            return;
+        }
+
+        if (index < 0 || index > songList.size()-1) {
             throw new ArrayIndexOutOfBoundsException();
         }
 
@@ -80,6 +88,10 @@ public class PlayList {
     }
 
     public void shufflePlayList() {
+        if (isSongListEmpty()) {
+            return;
+        }
+
         int size = songList.size();
         Random r = new Random();
         for (int i = 0; i < size; i++) {
@@ -95,8 +107,7 @@ public class PlayList {
     }
 
     public void play() {
-        if (songList.size() == 0) {
-            System.out.println("Your playlist is currently empty.");
+        if (isSongListEmpty()) {
             return;
         }
         displaySongAtIndex(this.counter);
@@ -105,10 +116,10 @@ public class PlayList {
     public void playNextSong() {
 
         this.counter += 1;
-        if (songList.size() == 0) {
-            System.out.println("Your playlist is currently empty.");
+        if (isSongListEmpty()) {
             return;
         }
+
         if (this.counter >= songList.size()) {
             this.counter = 0;
         }
@@ -122,8 +133,7 @@ public class PlayList {
     public void playPreviousSong() {
 
         this.counter = this.counter - 1;
-        if (songList.size() == 0) {
-            System.out.println("Your playlist is currently empty.");
+        if (isSongListEmpty()) {
             return;
         }
 
@@ -147,5 +157,13 @@ public class PlayList {
     public void resetPlaylist() {
         this.songList.clear();
         System.out.println("Your playlist has been cleared.");
+    }
+
+    public boolean isSongListEmpty() {
+        if (getPlayListSize() == 0) {
+            System.out.println("PlayList is currently empty.");
+            return true;
+        }
+        return false;
     }
 }
