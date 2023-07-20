@@ -5,18 +5,18 @@ public class Menu {
         int userChoice;
         try {
             do {
-                System.out.printf("Welcome to your music list, what would you like to do?\n");
+                System.out.printf("Welcome to your music playlist. What would you like to do?\n");
                 System.out.println("    1- Play Song");
-                System.out.println("    2- Next Song");
-                System.out.println("    3- Previous Song");
-                System.out.println("    4- Add song");
+                System.out.println("    2- Play Next Song");
+                System.out.println("    3- Play Previous Song");
+                System.out.println("    4- Add new song");
                 System.out.println("    5- Update Song");
                 System.out.println("    6- Remove Song");
-                System.out.println("    7- Find Song");
+                System.out.println("    7- Find a Song");
                 System.out.println("    8- View PlayList");
                 System.out.println("    9- Randomize PlayList");
                 System.out.println("    10- Sort PlayList by Title");
-                System.out.println("    11- Reset playlist");
+                System.out.println("    11- Reset Playlist");
                 System.out.println("    0- Quit");
                 System.out.println();
                 System.out.print("Enter choice: ");

@@ -146,12 +146,12 @@ public class PlayList {
 
     public void resetPlaylist() {
         this.songList.clear();
-        System.out.println("Your playlist has been cleared.");
+        System.out.println("Your playlist has been reset.");
     }
 
     public boolean isSongListEmpty() {
         if (getPlayListSize() == 0) {
-            System.out.println("PlayList is currently empty.");
+            System.out.println("Your playList is currently empty.");
             return true;
         }
         return false;
