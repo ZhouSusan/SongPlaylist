@@ -120,7 +120,7 @@ public class Menu {
                 Menu.printMenu(scan, playList);
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Invalid Choice Selection! " + e.getMessage());
         }
     }
 }
