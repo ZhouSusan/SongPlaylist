@@ -49,7 +49,7 @@ public class Menu {
                     System.out.print("Enter Duration in this format (0:00): ");
                     newSong.setDuration(scan.nextLine());
 
-                    System.out.print("Enter Album: ");
+                    System.out.print("Enter Album's Name: ");
                     newSong.setAlbum(scan.nextLine());
 
                     playList.addSong(newSong);
@@ -61,7 +61,7 @@ public class Menu {
                     if (playList.isSongListEmpty()) {
                         break;
                     } else {
-                        System.out.println("Updating which song selection?");
+                        System.out.println("Which song selection would you like to update?");
                         int songSelection = scan.nextInt();
 
                         System.out.print("Enter Title: ");
@@ -74,7 +74,7 @@ public class Menu {
                         System.out.print("Enter Duration in this format (0:00): ");
                         String updatedDuration = scan.nextLine();
 
-                        System.out.print("Enter Album: ");
+                        System.out.print("Enter Album's Name: ");
                         String updatedAlbum = scan.nextLine();
 
                         playList.updateSong(songSelection, updatedTitle, updatedArtist, updatedDuration, updatedAlbum);
@@ -120,7 +120,7 @@ public class Menu {
                 Menu.printMenu(scan, playList);
             }
         } catch (Exception e) {
-            System.out.println("Invalid Choice Selection! " + e.getMessage());
+            System.out.println("Invalid choice selection! ");
         }
     }
 }
