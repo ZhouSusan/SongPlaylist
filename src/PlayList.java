@@ -33,8 +33,11 @@ public class PlayList {
     public Song findSong(String title) {
         for (Song s : songList) {
             if (s.getTitle().equals(title)) {
-                System.out.println("Track Number: " + (this.trackNumber-1) + " ," + s.toString());
+                System.out.println(s.toString());
                 return s;
+            } else {
+                System.out.println("Song is not found in your playlist.");
+                break;
             }
         }
 
