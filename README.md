@@ -21,7 +21,6 @@ Menu for users
 Adding new Song
 
 ![img_1.png](img_1.png)
-![img_4.png](img_4.png)
 
 Updating Song 
 
