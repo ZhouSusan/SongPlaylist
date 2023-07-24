@@ -14,32 +14,32 @@ Features:
 ____________________________________________________________
 Images: 
 
-Menu for users
+Playlist menu
 
-![img_3.png](img_3.png)
+![img_3.png](./src/images/menu.png)
 
-Adding new Song
+Adding duplicate Song to playlist
 
-![img_1.png](img_1.png)
+![img_1.png](./src/images/addingDuplicateSong.png)
 
 Updating Song 
 
-![img_5.png](img_5.png)
+![img_5.png](./src/images/updatingSong.png)
 
 Remove a Song 
 
-![img_6.png](img_6.png)
-![img_7.png](img_7.png)
+![img_6.png](./src/images/viewPlaylist.png)
+![img_7.png](./src/images/songRemoval.png)
 
 Playlist after removing song
 
-![img_8.png](img_8.png)
+![img_8.png](./src/images/playListAfterSongRemoval.png)
 
 
 Shuffle Playlist 
 
-![img_9.png](img_9.png)
+![img_9.png](./src/images/ShufflePlaylist.png)
 
-Sort Playlist by Title's name
+Playlist sorted by song's title
 
-![img_10.png](img_10.png)
+![img_10.png](./src/images/SortedPlaylist.png)
