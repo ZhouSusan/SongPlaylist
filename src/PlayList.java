@@ -5,6 +5,10 @@ import java.util.Random;
 
 public class PlayList {
 
+    public ArrayList<Song> getSongList() {
+        return songList;
+    }
+
     private ArrayList<Song> songList;
     private int trackNumber;
 
@@ -35,11 +39,9 @@ public class PlayList {
             if (s.getTitle().equals(title)) {
                 System.out.println(s.toString());
                 return s;
-            } else {
-                System.out.println("Song is not found in your playlist.");
-                break;
             }
         }
+        System.out.println("Song is not found in your playlist.");
 
         return null;
     }
