@@ -49,7 +49,7 @@ class PlayListTest {
         Song fifthSong = new Song("Who Says", "Selena Gomez", "3:30", "Stars Dance");
         myPlaylist.addSong(fifthSong);
 
-        // Remove a song
+        // Removing a song
         Song removeThisSong = new Song("removeTitle", "removeArtist", "0:00", "removeAlbum");
         myPlaylist.addSong(removeThisSong);
         assertTrue(myPlaylist.getPlayListSize() == 6);
@@ -119,7 +119,7 @@ class PlayListTest {
         assertTrue(myPlaylist.counter == 4);
         assertTrue(myPlaylist.getSongList().get(myPlaylist.counter).getTitle().equals("Who Says"));
 
-        // Resetting a song
+        // Resetting playlist
         myPlaylist.resetPlaylist();
         assertTrue(myPlaylist.isSongListEmpty());
         assertTrue(myPlaylist.getPlayListSize() == 0);
